@@ -7,7 +7,8 @@ services:
     restart: always
     ports: 
       - '8080:8080'
-    links: 
+    links:
+    # server name. 
       - 'database'
 
   database:
@@ -24,8 +25,10 @@ services:
     expose: 
       - '3306'
     volumes:
-      - my-db:/var/lib/mysql
+      # map with out scope volumes
+      - temporary:/var/lib/mysql
 
 volumes: 
-  my-db:
+  # for keeping data in database when down container 
+  temporary:
     
