@@ -4,6 +4,10 @@
     "rules": {
       "@typescript-eslint/rule-name": "error"
     },
-    "extends": ["plugin:@typescript-eslint/recommended"]
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ]
 
   }
